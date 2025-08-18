@@ -1,0 +1,31 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snake
+  namespace: kristianteppan
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: snake
+  template:
+    metadata:
+      labels:
+        app: snake
+    spec:
+      containers:
+        - name: snake
+          image: cmilanf/docker-snake:latest
+          ports:
+            - name: http
+              containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: snake-config
+          resources:
+            requests:
+              cpu: 10m
+              memory: 12Mi
+            limits:
+              memory: 24Mi

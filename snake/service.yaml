@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: snake
+  namespace: kristianteppan
+spec:
+  type: ClusterIP
+  selector:
+    app: snake
+  ports:
+    - name: web
+      port: 80
+      targetPort: http
