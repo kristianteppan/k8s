@@ -17,5 +17,5 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: podtato-head-entry
-          port: 9000
+        - name: snake
+          port: 80
