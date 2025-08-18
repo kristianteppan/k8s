@@ -16,16 +16,16 @@ spec:
     spec:
       containers:
         - name: snake
-          image: cmilanf/docker-snake:latest
+          image: cmilanf/docker-snake
           ports:
             - name: http
-              containerPort: 3000
+              containerPort: 5000
           envFrom:
             - configMapRef:
                 name: snake-config
           resources:
             requests:
-              cpu: 10m
-              memory: 12Mi
+              cpu: 100m
+              memory: 256Mi
             limits:
-              memory: 24Mi
+              memory: 512Mi
