@@ -11,4 +11,4 @@ configMapGenerator:
   - name: snake-config
     namespace: kristianteppan
     literals:
-      - SNAKE_PORT_NUMBER=5000
+      - SNAKE_PORT_NUMBER=3000
