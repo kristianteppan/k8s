@@ -6,13 +6,16 @@ metadata:
   annotations:
     link.argocd.argoproj.io/external-link: https://podtato-krt.s9n.no
 spec:
-  parentRefs: [ { name: gke-gateway, namespace: gateway } ]
-  hostnames: [ podtato-krt.s9n.no ]
+  parentRefs:
+    - name: gke-gateway
+      namespace: gateway
+  hostnames:
+    - podtato-krt.s9n.no
   rules:
     - matches:
-      - path:
-        - type: PathPrefix
-          value: /
+        - path:
+            type: PathPrefix
+            value: /
       backendRefs:
         - name: podtato-head-entry
           port: 9000
