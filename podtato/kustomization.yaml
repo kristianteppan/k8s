@@ -1,6 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: kristianteppan
+
+resources:
+  - http-route.yaml
+
 helmCharts:
   - name: podtato-head
     repo: https://charts.portefaix.xyz/
@@ -10,6 +14,3 @@ helmCharts:
     valuesFile: values.yaml
     additionalValuesFiles:
       - ./wood-legs-crab/values.yaml
-
-resources:
-  - http-route.yaml
