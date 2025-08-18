@@ -10,3 +10,6 @@ helmCharts:
     valuesFile: values.yaml
     additionalValuesFiles:
       - ./wood-legs-crab/values.yaml
+
+resources:
+  - http-route.yaml
