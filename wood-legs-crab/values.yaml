@@ -1,0 +1,24 @@
+hat:
+  env:
+    - name: PODTATO_PART_NUMBER
+      value: "02"
+
+leftLeg:
+  env:
+    - name: PODTATO_PART_NUMBER
+      value: "04"
+
+leftArm:
+  env:
+    - name: PODTATO_PART_NUMBER
+      value: "05"
+
+rightLeg:
+  env:
+    - name: PODTATO_PART_NUMBER
+      value: "04"
+
+rightArm:
+  env:
+    - name: PODTATO_PART_NUMBER
+      value: "05"
