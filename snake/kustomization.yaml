@@ -7,3 +7,8 @@ resources:
   - deployment.yaml
   - service.yaml
 
+configMapGenerator:
+  - name: snake-config
+    namespace: kristianteppan
+    literals:
+      - SNAKE_PORT_NUMBER=8080
