@@ -8,6 +8,6 @@ spec:
   selector:
     app: snake
   ports:
-    - name: web
+    - name: http
       port: 3000
-      targetPort: http
+      targetPort: 3000
