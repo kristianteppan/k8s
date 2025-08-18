@@ -13,4 +13,6 @@ spec:
       - path:
         - type: PathPrefix
           value: /
-      backendRefs: [ { name: podtato, port: 80 } ]
+      backendRefs:
+        - name: podtato-head-entry
+          port: 9000
