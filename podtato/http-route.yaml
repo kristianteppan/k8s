@@ -1,16 +1,16 @@
 apiVersion: gateway.networking.k8s.io/v1beta1
 kind: HTTPRoute
 metadata:
- name: podtato
- namespace: kristianteppan
- annotations:
- link.argocd.argoproj.io/external-link: https://podtato-krt.s9n.no
+  name: podtato
+  namespace: kristianteppan
+  annotations:
+    link.argocd.argoproj.io/external-link: https://podtato-krt.s9n.no
 spec:
- parentRefs: [ { name: gke-gateway, namespace: gateway } ]
- hostnames: [ podtato-krt.s9n.no ]
- rules:
- - matches:
- - path:
- - type: PathPrefix
- value: /
- backendRefs: [ { name: podtato, port: 80 } ]
+  parentRefs: [ { name: gke-gateway, namespace: gateway } ]
+  hostnames: [ podtato-krt.s9n.no ]
+  rules:
+    - matches:
+      - path:
+        - type: PathPrefix
+          value: /
+      backendRefs: [ { name: podtato, port: 80 } ]
